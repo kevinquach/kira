@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3427165984">
+    <data-source source="LOCAL" name="Rails kira: development" uuid="2caf9cc0-763f-4282-80b2-c93cf57a8f84">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:kira_development</jdbc-url>
+      <user-name>kira</user-name>
+      <user-password>dfcbdfc8dfc9</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails kira: test" uuid="792ee14d-a122-45c6-92a0-4a57f94d9684">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:kira_test</jdbc-url>
+      <user-name>kira</user-name>
+      <user-password>dfcbdfc8dfc9</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails kira: production" uuid="63072da2-b013-4f11-8168-275d5e689b04">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:kira_production</jdbc-url>
+      <user-name>kira</user-name>
+      <user-password>dfcbdfc8dfc9</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

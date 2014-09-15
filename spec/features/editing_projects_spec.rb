@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature "Editing Projects" do
   scenario "Updating a project" do
-    FactoryGirl.create(:project, name: "TextMate 2")
+    create(:project, name: "TextMate 2")
   
     visit "/"
     click_link "TextMate 2"
