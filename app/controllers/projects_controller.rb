@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    p params
   end
 
   def create
@@ -17,6 +18,7 @@ class ProjectsController < ApplicationController
       flash[:alert] = "Project has not been created."
       render "new"
     end
+    p params
   end
 
   def show
