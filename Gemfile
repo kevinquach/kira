@@ -11,6 +11,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'zurb-foundation'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'haml'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -27,7 +28,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -48,6 +49,7 @@ group :test do
   gem 'selenium-webdriver', '~> 2.35.1'
   gem 'database_cleaner', '~> 1.0.1'
   gem 'email_spec', '~> 1.5.0'
+  gem 'shoulda-matchers'
 end
 
 gem 'cancan', "~> 1.6.10"
