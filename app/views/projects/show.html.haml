@@ -1,7 +1,9 @@
 - title(@project.name, "Projects")
 %h2
   = @project.name
-= link_to "Edit Project", edit_project_path(@project)
+= link_to "Edit Project", edit_project_path(@project), class: "radius button"
 = link_to "Delete Project", project_path(@project),
     method: :delete,
-    data: { confirm: I18n.t('projects.delete_confirm') }
+    data: { confirm: I18n.t('projects.delete_confirm') },
+    class: "radius button"
+= link_to "New Ticket", new_project_ticket_path(@project), class: "radius button"

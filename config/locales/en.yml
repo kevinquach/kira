@@ -12,3 +12,8 @@ en:
         error: Project has not been updated.
       destroy: Project has been destroyed.
       missing: The project you were looking for could not be found.
+  tickets:
+    flashes:
+      create:
+        success: Ticket has been created.
+        error: Ticket has not been created.
