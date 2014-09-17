@@ -2,3 +2,6 @@
 %h2
   = @project.name
 = link_to "Edit Project", edit_project_path(@project)
+= link_to "Delete Project", project_path(@project),
+    method: :delete,
+    data: { confirm: I18n.t('projects.delete_confirm') }

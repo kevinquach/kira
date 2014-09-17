@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :set_project, only: [ :show, :edit, :update, :destroy ]
+
   def index
     @projects = Project.all
   end
@@ -11,36 +13,46 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
 
     if @project.save
-      redirect_to @project,
-      notice: "Project has been created."
+      redirect_to @project, notice: t('projects.flashes.create.success')
     else
-      flash[:alert] = "Project has not been created."
+      flash[:alert] = t('projects.flashes.create.error')
       render "new"
     end
   end
 
   def show
-    @project = Project.find(params[:id])
   end
 
   def edit
-    @project = Project.find(params[:id])
   end
 
   def update
-    @project = Project.find(params[:id])
     if @project.update(project_params)
-      flash[:notice] = "Project has been updated."
-      redirect_to @project
+      redirect_to @project, notice: t('projects.flashes.update.success')
     else
-      flash[:alert] = "Project has not been updated."
+      flash[:alert] = t('projects.flashes.update.error')
       render "edit"
     end
+  end
+
+  def destroy
+    @project.destroy
+
+    flash[:notice] = t('projects.flashes.destroy')
+
+    redirect_to projects_path
   end
 
   private
 
   def project_params
     params.require(:project).permit(:name, :description)
+  end
+
+  def set_project
+    @project = Project.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    flash[:alert] = I18n.t('projects.flashes.missing')
+    redirect_to projects_path
   end
 end
