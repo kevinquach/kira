@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
       redirect_to @project, notice: t('projects.flashes.create.success')
     else
       flash[:alert] = t('projects.flashes.create.error')
-      render "new"
+      render :new
     end
   end
 
@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
       redirect_to @project, notice: t('projects.flashes.update.success')
     else
       flash[:alert] = t('projects.flashes.update.error')
-      render "edit"
+      render :edit
     end
   end
 
