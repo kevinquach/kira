@@ -7,3 +7,10 @@
     data: { confirm: I18n.t('projects.delete_confirm') },
     class: "radius button"
 = link_to "New Ticket", new_project_ticket_path(@project), class: "radius button"
+
+%ul
+  #tickets
+    - @project.tickets.each do |ticket|
+      %li
+        ! ##{ticket.id} -
+        = link_to ticket.title, [@project, ticket]
