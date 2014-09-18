@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature "Creating Tickets" do
   before do
-    FactoryGirl.create(:project, name: "Internet Explorer")
+    create(:project, name: "Internet Explorer")
     visit '/'
     click_link "Internet Explorer"
     click_link "New Ticket"
